@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}
+ Home
+{% endblock %}
+{% block body %}
+<form action = "{{ url_for('upload_file') }}" method = "POST" enctype = "multipart/form-data">
+    <div class="image-upload">
+        <input type="file" name="file" id="logo" onchange="fileValue(this)" required>
+        <label for="logo" class="upload-field" id="file-label">
+            <div class="file-thumbnail">
+                <i id="image-preview" class="fas fa-file-pdf"></i>
+                <h2 id="filename">
+                    Drag & Drop
+                    | Click Here
+                </h2>
+                <h3>Supports .pdf only.</h3>
+            </div>
+        </label>
+    </div>
+    <div class="text-center">
+        <input class="btn btn-outline-dark " id="button" 
+               style="width: 50%; margin: auto;margin-top: 20px;border-color: lightgray;" 
+               type = "submit" placeholder="Upload" value="Submit"
+        />
+    </div>
+</form>   
+
+{% endblock %}
