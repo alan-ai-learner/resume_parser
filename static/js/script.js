@@ -19,7 +19,7 @@ $("#button").click(function(e) {
     var form_data = new FormData($('#upload-file')[0]);
     $.ajax({
         type: 'POST',
-        url: 'http://4455-1-22-107-169.ngrok.io//upload_file/',
+        url: 'https://5eb9-1-22-107-169.ngrok.io//upload_file/',
         beforeSend: function(){$('.loader').show();},
         complete: function(){ $('.loader').hide();},
         data: form_data,
